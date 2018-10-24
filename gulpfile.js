@@ -92,7 +92,7 @@ gulp.task('sass', function() {
 });
 
 // watch
-gulp.task('front', ['pug', 'sass'], function() {
+gulp.task('front', ['pug'], function() {
     browserSync.init({
         // notify: false,
       server: {
@@ -100,6 +100,7 @@ gulp.task('front', ['pug', 'sass'], function() {
       }
     });
     gulp.watch("_pug/**/*.pug", ['pug']);
-    gulp.watch("media/sass/**/*.{sass,scss}", ['sass']);
+    // gulp.watch("media/sass/**/*.{sass,scss}", ['sass']);
     gulp.watch("media/js/*.js").on('change', reload);
+    gulp.watch("media/css/*.css").on('change', reload);
 });

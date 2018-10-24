@@ -1,0 +1,25 @@
+extends ../templates/base
+block extra_css
+
+block content
+    h1.title Usage
+    .columns
+        .text__container
+            h4 Inline
+            ul
+                li the boss
+        .text__container
+            h4 Base64
+            ul
+                li can be used as background
+                li or content in pseudo elemnts
+        .text__container
+            h4 External file
+            ul
+                li embed
+                li img
+                li iframe
+    a.button(href="6.html") prev
+    a.button(href="8.html") next
+
+block extra_js
